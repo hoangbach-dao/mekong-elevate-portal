@@ -37,6 +37,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
 /* ── VIEWS ── */
 .view { display: none; }
 .view.active { display: block; }
+#login-view.active { display: flex; }
 
 /* ── LOGIN ── */
 #login-view {
@@ -2396,8 +2397,13 @@ function buildSidebar() {
 }
 
 function showView(id) {
-  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.view').forEach(v => {
+    v.classList.remove('active');
+    v.style.display = 'none';
+  });
+  const target = document.getElementById(id);
+  target.classList.add('active');
+  target.style.display = '';
 }
 
 function showPage(page) {
