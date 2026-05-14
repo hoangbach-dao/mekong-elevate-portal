@@ -1681,8 +1681,28 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
             </div>
             <div class="form-row form-row-3">
               <div>
-                <div class="field-label">Kỳ báo cáo</div>
-                <input type="text" id="m6-ky-bc" placeholder="Q2-2026" style="font-family:var(--mono)">
+                <div class="field-label">Kỳ báo cáo <span class="required">*</span></div>
+                <select id="m6-ky-bc" style="font-family:var(--mono)">
+                  <option value="">-- Chọn kỳ --</option>
+                  <option value="Q1-2025">Q1-2025</option>
+                  <option value="Q2-2025">Q2-2025</option>
+                  <option value="Q3-2025">Q3-2025</option>
+                  <option value="Q4-2025">Q4-2025</option>
+                  <option value="Q1-2026">Q1-2026</option>
+                  <option value="Q2-2026">Q2-2026</option>
+                  <option value="Q3-2026">Q3-2026</option>
+                  <option value="Q4-2026">Q4-2026</option>
+                  <option value="Q1-2027">Q1-2027</option>
+                  <option value="Q2-2027">Q2-2027</option>
+                  <option value="Q3-2027">Q3-2027</option>
+                  <option value="Q4-2027">Q4-2027</option>
+                  <option value="Q1-2028">Q1-2028</option>
+                  <option value="Q2-2028">Q2-2028</option>
+                  <option value="Q3-2028">Q3-2028</option>
+                  <option value="Q4-2028">Q4-2028</option>
+                  <option value="Q1-2029">Q1-2029</option>
+                  <option value="Q2-2029">Q2-2029</option>
+                </select>
               </div>
               <div>
                 <div class="field-label">Loại quỹ/cơ chế</div>
@@ -1721,10 +1741,10 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
             <div>
               <div class="field-label">Mục đích quỹ/cơ chế <span style="color:var(--text3);font-size:11px">(chọn nhiều)</span></div>
               <div class="checkbox-grid">
-                <label class="checkbox-item"><input type="checkbox" value="khan-cap"><span>Hỗ trợ khẩn cấp sau thiên tai</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="nhu-yeu-pham"><span>Hỗ trợ nhu yếu phẩm, lương thực</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="phuc-hoi-sk"><span>Phục hồi sinh kế</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="ht-san-xuat"><span>Hỗ trợ sản xuất</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-md-khan-cap" value="khan-cap"><span>Hỗ trợ khẩn cấp sau thiên tai</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-md-nhu-yeu-pham" value="nhu-yeu-pham"><span>Hỗ trợ nhu yếu phẩm, lương thực</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-md-phuc-hoi-sk" value="phuc-hoi-sk"><span>Phục hồi sinh kế</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-md-ht-san-xuat" value="ht-san-xuat"><span>Hỗ trợ sản xuất</span></label>
                 <label class="checkbox-item"><input type="checkbox" id="m6-muc-dich-khac-cb"><span>Khác</span></label>
               </div>
               <input type="text" id="m6-muc-dich-khac" placeholder="Ghi rõ mục đích khác..." style="margin-top:8px;display:none">
@@ -1754,11 +1774,11 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
             <div style="margin-bottom:14px">
               <div class="field-label">Đối tượng có thể tiếp cận <span style="color:var(--text3);font-size:11px">(chọn nhiều)</span></div>
               <div class="checkbox-grid">
-                <label class="checkbox-item"><input type="checkbox" value="ho-bi-anh-huong"><span>Hộ bị ảnh hưởng bởi thiên tai</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="nhom-de-ton-thuong"><span>Các nhóm dễ bị tổn thương</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="tv-to-nhom"><span>Thành viên tổ nhóm (VSLA, tổ nhóm SX)</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="toan-bo-ho"><span>Toàn bộ hộ trong thôn/xã</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="htx-dn"><span>Thành viên/hộ liên kết HTX, doanh nghiệp</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-dt-ho-bi-anh-huong" value="ho-bi-anh-huong"><span>Hộ bị ảnh hưởng bởi thiên tai</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-dt-nhom-de-ton-thuong" value="nhom-de-ton-thuong"><span>Các nhóm dễ bị tổn thương</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-dt-tv-to-nhom" value="tv-to-nhom"><span>Thành viên tổ nhóm (VSLA, tổ nhóm SX)</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-dt-toan-bo-ho" value="toan-bo-ho"><span>Toàn bộ hộ trong thôn/xã</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-dt-htx-dn" value="htx-dn"><span>Thành viên/hộ liên kết HTX, doanh nghiệp</span></label>
                 <label class="checkbox-item"><input type="checkbox" id="m6-dt-khac-cb"><span>Khác</span></label>
               </div>
               <input type="text" id="m6-dt-khac" placeholder="Ghi rõ đối tượng khác..." style="margin-top:8px;display:none">
@@ -1789,10 +1809,10 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
             <div style="margin-bottom:14px">
               <div class="field-label">Hình thức phổ biến quy chế <span style="color:var(--text3);font-size:11px">(chọn nhiều)</span></div>
               <div class="checkbox-grid">
-                <label class="checkbox-item"><input type="checkbox" value="cuoc-hop"><span>Thông qua các cuộc họp (họp thôn, xã, nhóm…)</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="truong-thon"><span>Thông báo qua trưởng thôn, trưởng nhóm</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="tai-lieu"><span>Phát tài liệu, hướng dẫn</span></label>
-                <label class="checkbox-item"><input type="checkbox" value="niem-yet"><span>Niêm yết công khai</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-pb-cuoc-hop" value="cuoc-hop"><span>Thông qua các cuộc họp (họp thôn, xã, nhóm…)</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-pb-truong-thon" value="truong-thon"><span>Thông báo qua trưởng thôn, trưởng nhóm</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-pb-tai-lieu" value="tai-lieu"><span>Phát tài liệu, hướng dẫn</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="m6-pb-niem-yet" value="niem-yet"><span>Niêm yết công khai</span></label>
                 <label class="checkbox-item"><input type="checkbox" id="m6-pb-khac-cb"><span>Khác</span></label>
               </div>
               <input type="text" id="m6-pb-khac" placeholder="Ghi rõ hình thức khác..." style="margin-top:8px;display:none">
@@ -1807,11 +1827,11 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
           <div class="form-section">
             <div class="form-section-title">3. Hỗ trợ từ dự án</div>
             <div class="checkbox-grid">
-              <label class="checkbox-item"><input type="checkbox" value="thanh-lap-moi"><span>Hỗ trợ thành lập mới quỹ/cơ chế</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="xay-dung-quy-che"><span>Hỗ trợ xây dựng quy chế/vận hành</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="tai-chinh-quy"><span>Hỗ trợ tài chính cho quỹ/cơ chế</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="nang-cao-nl-qly"><span>Nâng cao năng lực quản lý/vận hành</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="vat-tu-tb"><span>Hỗ trợ vật tư/trang thiết bị</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-ht-thanh-lap-moi" value="thanh-lap-moi"><span>Hỗ trợ thành lập mới quỹ/cơ chế</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-ht-xay-dung-quy-che" value="xay-dung-quy-che"><span>Hỗ trợ xây dựng quy chế/vận hành</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-ht-tai-chinh-quy" value="tai-chinh-quy"><span>Hỗ trợ tài chính cho quỹ/cơ chế</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-ht-nang-cao-nl-qly" value="nang-cao-nl-qly"><span>Nâng cao năng lực quản lý/vận hành</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-ht-vat-tu-tb" value="vat-tu-tb"><span>Hỗ trợ vật tư/trang thiết bị</span></label>
               <label class="checkbox-item"><input type="checkbox" id="m6-ht-khac-cb"><span>Hỗ trợ khác</span></label>
             </div>
             <input type="text" id="m6-ht-khac" placeholder="Ghi rõ hỗ trợ khác..." style="margin-top:8px;display:none">
@@ -1821,11 +1841,11 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
           <div class="form-section">
             <div class="form-section-title">4. Danh mục bằng chứng</div>
             <div class="checkbox-grid">
-              <label class="checkbox-item"><input type="checkbox" value="bien-ban-tl"><span>Biên bản thành lập hoặc quy chế quỹ/cơ chế</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="pvs-m6"><span>Kết quả PVS trưởng thôn, trưởng nhóm, BQL quỹ…</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="bao-cao-hd-m6"><span>Báo cáo hoạt động của quỹ/cơ chế</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-bc-bien-ban-tl" value="bien-ban-tl"><span>Biên bản thành lập hoặc quy chế quỹ/cơ chế</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-bc-pvs-m6" value="pvs-m6"><span>Kết quả PVS trưởng thôn, trưởng nhóm, BQL quỹ…</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-bc-bao-cao-hd-m6" value="bao-cao-hd-m6"><span>Báo cáo hoạt động của quỹ/cơ chế</span></label>
               <label class="checkbox-item"><input type="checkbox" id="m6-bc-khac-cb"><span>Bằng chứng khác</span></label>
-              <label class="checkbox-item"><input type="checkbox" value="bien-ban-hop-m6"><span>Biên bản họp liên quan đến vận hành quỹ/cơ chế</span></label>
+              <label class="checkbox-item"><input type="checkbox" id="m6-bc-bien-ban-hop-m6" value="bien-ban-hop-m6"><span>Biên bản họp liên quan đến vận hành quỹ/cơ chế</span></label>
             </div>
             <input type="text" id="m6-bc-khac" placeholder="Ghi rõ bằng chứng khác..." style="margin-top:8px;display:none">
             <div style="margin-top:14px">
@@ -2064,7 +2084,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
 // ════════════════════════════════════════════════════════════════════
 //  ⚙️  CẤU HÌNH — paste URL Apps Script Web App vào đây sau khi deploy
 // ════════════════════════════════════════════════════════════════════
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbxue99d53a-uUHRCANypumrjT-wlbfC0SEW1VtTSrPruKalfaSv9Jb_ZgSjLePgddkO/exec';
+const GAS_URL = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
 
 // Kiểm tra xem đã cấu hình chưa
 const GAS_CONFIGURED = GAS_URL && !GAS_URL.includes('PASTE_');
@@ -3295,7 +3315,9 @@ function openM06New() {
   m06EditingRecordId = 'M06-' + Date.now();
   resetFormM06Fields();
   document.getElementById('m06-prev-banner').style.display = 'none';
-  document.getElementById('m6-ky-bc').value = m06CurrentPeriod();
+  // Pre-select current period in dropdown
+  const kyEl = document.getElementById('m6-ky-bc');
+  if (kyEl) { kyEl.value = m06CurrentPeriod(); }
   document.getElementById('m06-submit-period').textContent = m06CurrentPeriod();
   document.getElementById('submit-success-m06').style.display = 'none';
   document.getElementById('form-m06-meta').textContent =
@@ -3320,8 +3342,9 @@ function openM06Update(recordId, isRevision) {
     document.getElementById('m06-prev-banner').style.display = 'flex';
   }
 
-  // Always set current period in the ky-bc field
-  document.getElementById('m6-ky-bc').value = m06CurrentPeriod();
+  // Pre-select current period in dropdown (user can change for retrospective entry)
+  const kyEl = document.getElementById('m6-ky-bc');
+  if (kyEl) { kyEl.value = m06CurrentPeriod(); }
   document.getElementById('m06-submit-period').textContent = m06CurrentPeriod();
   document.getElementById('submit-success-m06').style.display = 'none';
 
@@ -3336,71 +3359,105 @@ function openM06Update(recordId, isRevision) {
 
 // ── Load data object into form fields ──
 function loadM06DataToForm(d) {
-  const setVal = (id, val) => { const el=document.getElementById(id); if(el&&val!==undefined) el.value=val||''; };
+  const setVal    = (id, val) => { const el=document.getElementById(id); if(el && val!==undefined) el.value=val||''; };
+  const setSelect = (id, val) => { const el=document.getElementById(id); if(el && val) el.value=val; };
+  const setCB     = (id, on)  => { const el=document.getElementById(id); if(el) el.checked=!!on; };
+  const setRadio  = (name, val) => { if(!val) return; document.querySelectorAll(`input[name="${name}"]`).forEach(r => r.checked = r.value===val); };
+  const showText  = (id) => { const el=document.getElementById(id); if(el) el.style.display='block'; };
+
   setVal('m6-ten-quy', d.tenQuy);
-  setVal('m6-tinh', d.tinh);
+  setSelect('m6-tinh', d.tinh);
   setVal('m6-xa', d.xa);
   setVal('m6-thon', d.thon);
-  setVal('m6-loai-quy', d.loaiQuy);
-  setVal('m6-hinh-thuc', d.hinhThuc);
-  setVal('m6-quy-mo', d.quyMo);
+  setSelect('m6-loai-quy', d.loaiQuy);
+  setSelect('m6-hinh-thuc', d.hinhThuc);
+  setSelect('m6-quy-mo', d.quyMo);
   setVal('m6-thoi-diem', d.thoiDiem);
-  setVal('m6-cach-hinh-thanh', d.cachHinhThanh);
+  setSelect('m6-cach-hinh-thanh', d.cachHinhThanh);
   setVal('m6-mo-ta', d.moTa);
   setVal('m6-link-bc', d.linkBc);
 
-  // Checkboxes — muc dich
-  const mdValues = (d.mucDich||[]);
-  document.querySelectorAll('#page-form-m06 .checkbox-item input[value]').forEach(cb => {
-    cb.checked = mdValues.includes(cb.value);
-  });
-  // "Khác" text fields
-  if (d.mucDichKhac) {
-    setVal('m6-muc-dich-khac', d.mucDichKhac);
-    document.getElementById('m6-muc-dich-khac').style.display = '';
-    const cb = document.getElementById('m6-muc-dich-khac-cb'); if(cb) cb.checked=true;
-  }
-  if (d.dtKhac) { setVal('m6-dt-khac', d.dtKhac); document.getElementById('m6-dt-khac').style.display=''; const cb=document.getElementById('m6-dt-khac-cb'); if(cb) cb.checked=true; }
-  if (d.pbKhac) { setVal('m6-pb-khac', d.pbKhac); document.getElementById('m6-pb-khac').style.display=''; const cb=document.getElementById('m6-pb-khac-cb'); if(cb) cb.checked=true; }
-  if (d.htKhac) { setVal('m6-ht-khac', d.htKhac); document.getElementById('m6-ht-khac').style.display=''; const cb=document.getElementById('m6-ht-khac-cb'); if(cb) cb.checked=true; }
-  if (d.bcKhac) { setVal('m6-bc-khac', d.bcKhac); document.getElementById('m6-bc-khac').style.display=''; const cb=document.getElementById('m6-bc-khac-cb'); if(cb) cb.checked=true; }
+  // Mục đích
+  const md = d.mucDich || [];
+  setCB('m6-md-khan-cap',    md.includes('khan-cap'));
+  setCB('m6-md-nhu-yeu-pham',md.includes('nhu-yeu-pham'));
+  setCB('m6-md-phuc-hoi-sk', md.includes('phuc-hoi-sk'));
+  setCB('m6-md-ht-san-xuat', md.includes('ht-san-xuat'));
+  if (d.mucDichKhac) { setCB('m6-muc-dich-khac-cb',true); setVal('m6-muc-dich-khac',d.mucDichKhac); showText('m6-muc-dich-khac'); }
 
   // Radios
-  const setRadio = (name, val) => { if(!val) return; document.querySelectorAll(`input[name="${name}"]`).forEach(r => { r.checked = r.value===val; }); };
   setRadio('m6-trang-thai', d.trangThai);
-  setRadio('m6-quy-che', d.quyChe);
-  setRadio('m6-pho-bien', d.phoBien);
-  setRadio('m6-yeu-the', d.yeuThe);
+  setRadio('m6-quy-che',    d.quyChe);
+  setRadio('m6-pho-bien',   d.phoBien);
+  setRadio('m6-yeu-the',    d.yeuThe);
+
+  // Đối tượng
+  const dt = d.doiTuong || [];
+  setCB('m6-dt-ho-bi-anh-huong',    dt.includes('ho-bi-anh-huong'));
+  setCB('m6-dt-nhom-de-ton-thuong', dt.includes('nhom-de-ton-thuong'));
+  setCB('m6-dt-tv-to-nhom',         dt.includes('tv-to-nhom'));
+  setCB('m6-dt-toan-bo-ho',         dt.includes('toan-bo-ho'));
+  setCB('m6-dt-htx-dn',             dt.includes('htx-dn'));
+  if (d.dtKhac) { setCB('m6-dt-khac-cb',true); setVal('m6-dt-khac',d.dtKhac); showText('m6-dt-khac'); }
+
+  // Hình thức phổ biến
+  const pb = d.phoBienHinhThuc || [];
+  setCB('m6-pb-cuoc-hop',    pb.includes('cuoc-hop'));
+  setCB('m6-pb-truong-thon', pb.includes('truong-thon'));
+  setCB('m6-pb-tai-lieu',    pb.includes('tai-lieu'));
+  setCB('m6-pb-niem-yet',    pb.includes('niem-yet'));
+  if (d.pbKhac) { setCB('m6-pb-khac-cb',true); setVal('m6-pb-khac',d.pbKhac); showText('m6-pb-khac'); }
+
+  // Hỗ trợ từ dự án
+  const ht = d.hoTro || [];
+  setCB('m6-ht-thanh-lap-moi',    ht.includes('thanh-lap-moi'));
+  setCB('m6-ht-xay-dung-quy-che', ht.includes('xay-dung-quy-che'));
+  setCB('m6-ht-tai-chinh-quy',    ht.includes('tai-chinh-quy'));
+  setCB('m6-ht-nang-cao-nl-qly',  ht.includes('nang-cao-nl-qly'));
+  setCB('m6-ht-vat-tu-tb',        ht.includes('vat-tu-tb'));
+  if (d.htKhac) { setCB('m6-ht-khac-cb',true); setVal('m6-ht-khac',d.htKhac); showText('m6-ht-khac'); }
+
+  // Bằng chứng
+  const bc = d.bangChung || [];
+  setCB('m6-bc-bien-ban-tl',     bc.includes('bien-ban-tl'));
+  setCB('m6-bc-pvs-m6',          bc.includes('pvs-m6'));
+  setCB('m6-bc-bao-cao-hd-m6',   bc.includes('bao-cao-hd-m6'));
+  setCB('m6-bc-bien-ban-hop-m6', bc.includes('bien-ban-hop-m6'));
+  if (d.bcKhac) { setCB('m6-bc-khac-cb',true); setVal('m6-bc-khac',d.bcKhac); showText('m6-bc-khac'); }
 }
 
 // ── Read form fields into data object ──
 function readM06FormData() {
-  const getVal = id => { const el=document.getElementById(id); return el?el.value.trim():''; };
+  const getVal   = id => { const el=document.getElementById(id); return el?el.value.trim():''; };
   const getRadio = name => { const r=document.querySelector(`input[name="${name}"]:checked`); return r?r.value:''; };
-  const getCBValues = (section) => [...document.querySelectorAll(`${section} input[type=checkbox][value]:checked`)].map(c=>c.value);
+  const getCBById = (...ids) => ids.filter(id => { const el=document.getElementById(id); return el&&el.checked; }).map(id => document.getElementById(id).value);
 
   return {
-    tenQuy: getVal('m6-ten-quy'),
-    tinh: getVal('m6-tinh'),
-    xa: getVal('m6-xa'),
-    thon: getVal('m6-thon'),
-    loaiQuy: getVal('m6-loai-quy'),
-    hinhThuc: getVal('m6-hinh-thuc'),
-    quyMo: getVal('m6-quy-mo'),
-    thoiDiem: getVal('m6-thoi-diem'),
-    cachHinhThanh: getVal('m6-cach-hinh-thanh'),
-    trangThai: getRadio('m6-trang-thai'),
-    quyChe: getRadio('m6-quy-che'),
-    phoBien: getRadio('m6-pho-bien'),
-    yeuThe: getRadio('m6-yeu-the'),
-    mucDich: getCBValues('#page-form-m06 .form-section:nth-child(1)'),
-    moTa: getVal('m6-mo-ta'),
-    mucDichKhac: getVal('m6-muc-dich-khac'),
-    dtKhac: getVal('m6-dt-khac'),
-    pbKhac: getVal('m6-pb-khac'),
-    htKhac: getVal('m6-ht-khac'),
-    bcKhac: getVal('m6-bc-khac'),
-    linkBc: getVal('m6-link-bc'),
+    tenQuy:          getVal('m6-ten-quy'),
+    tinh:            getVal('m6-tinh'),
+    xa:              getVal('m6-xa'),
+    thon:            getVal('m6-thon'),
+    loaiQuy:         getVal('m6-loai-quy'),
+    hinhThuc:        getVal('m6-hinh-thuc'),
+    quyMo:           getVal('m6-quy-mo'),
+    thoiDiem:        getVal('m6-thoi-diem'),
+    cachHinhThanh:   getVal('m6-cach-hinh-thanh'),
+    trangThai:       getRadio('m6-trang-thai'),
+    quyChe:          getRadio('m6-quy-che'),
+    phoBien:         getRadio('m6-pho-bien'),
+    yeuThe:          getRadio('m6-yeu-the'),
+    mucDich:         getCBById('m6-md-khan-cap','m6-md-nhu-yeu-pham','m6-md-phuc-hoi-sk','m6-md-ht-san-xuat'),
+    mucDichKhac:     getVal('m6-muc-dich-khac'),
+    doiTuong:        getCBById('m6-dt-ho-bi-anh-huong','m6-dt-nhom-de-ton-thuong','m6-dt-tv-to-nhom','m6-dt-toan-bo-ho','m6-dt-htx-dn'),
+    dtKhac:          getVal('m6-dt-khac'),
+    phoBienHinhThuc: getCBById('m6-pb-cuoc-hop','m6-pb-truong-thon','m6-pb-tai-lieu','m6-pb-niem-yet'),
+    pbKhac:          getVal('m6-pb-khac'),
+    moTa:            getVal('m6-mo-ta'),
+    hoTro:           getCBById('m6-ht-thanh-lap-moi','m6-ht-xay-dung-quy-che','m6-ht-tai-chinh-quy','m6-ht-nang-cao-nl-qly','m6-ht-vat-tu-tb'),
+    htKhac:          getVal('m6-ht-khac'),
+    bangChung:       getCBById('m6-bc-bien-ban-tl','m6-bc-pvs-m6','m6-bc-bao-cao-hd-m6','m6-bc-bien-ban-hop-m6'),
+    bcKhac:          getVal('m6-bc-khac'),
+    linkBc:          getVal('m6-link-bc'),
   };
 }
 
@@ -3409,7 +3466,8 @@ async function submitFormM06() {
   const data = readM06FormData();
   if (!data.tenQuy || !data.tinh) { alert('Vui lòng điền đầy đủ các trường bắt buộc (*): Tên quỹ và Tỉnh.'); return; }
 
-  const period = m06CurrentPeriod();
+  const period = document.getElementById('m6-ky-bc')?.value || m06CurrentPeriod();
+  if (!period) { alert('Vui lòng chọn Kỳ báo cáo.'); return; }
   const entry = {
     recordId:    m06EditingRecordId,
     submittedBy: currentUser.username,
@@ -3474,17 +3532,26 @@ function closeHistModal() { document.getElementById('submission-modal').classLis
 
 // ── Reset form fields (blank) ──
 function resetFormM06Fields() {
-  ['m6-ten-quy','m6-xa','m6-thon','m6-ky-bc','m6-mo-ta','m6-muc-dich-khac','m6-dt-khac','m6-pb-khac','m6-ht-khac','m6-bc-khac','m6-link-bc']
+  ['m6-ten-quy','m6-xa','m6-thon','m6-mo-ta','m6-muc-dich-khac','m6-dt-khac','m6-pb-khac','m6-ht-khac','m6-bc-khac','m6-link-bc']
     .forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  ['m6-tinh','m6-loai-quy','m6-hinh-thuc','m6-quy-mo','m6-cach-hinh-thanh']
+  ['m6-tinh','m6-loai-quy','m6-hinh-thuc','m6-quy-mo','m6-cach-hinh-thanh','m6-ky-bc']
     .forEach(id=>{const el=document.getElementById(id);if(el)el.selectedIndex=0;});
   const tm=document.getElementById('m6-thoi-diem'); if(tm)tm.value='';
   document.querySelectorAll('#page-form-m06 input[type=checkbox]').forEach(c=>c.checked=false);
   document.querySelectorAll('#page-form-m06 input[type=radio]').forEach(r=>r.checked=false);
   ['m6-muc-dich-khac','m6-dt-khac','m6-pb-khac','m6-ht-khac','m6-bc-khac']
     .forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
+  document.getElementById('m06-submit-period').textContent = '—';
 }
 function resetFormM06() { resetFormM06Fields(); }
+
+// Update submit period display when dropdown changes
+document.addEventListener('change', e => {
+  if (e.target.id === 'm6-ky-bc') {
+    const disp = document.getElementById('m06-submit-period');
+    if (disp) disp.textContent = e.target.value || '—';
+  }
+});
 
 // ── M10 ──
 let incentiveRowCount=0;
